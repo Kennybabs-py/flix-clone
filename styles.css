@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@font-face {
+  font-family: "Netflix Sans";
+  src: url("./fonts/netflix-sans/NetflixSansRegular.ttf");
+}
+
+/* Default setting */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+:root {
+  --red: #e50914;
+  --white: #ffffff;
+  --grey: #303030;
+}
+
+body {
+  font-family: "Netflix Sans", sans-serif;
+  color: var(--white);
+}
+
+section {
+  width: 100%;
+  padding: 50px 0;
+  background-color: #000000;
+  border-bottom: 8px solid #222;
+}
+
+@media (min-width: 650px) {
+  section {
+    padding: 70px 0;
+  }
+}
+
+/* form styling */
+form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 8px;
+}
+
+form > input {
+  width: 100%;
+  max-width: 500px;
+  height: 3.5rem;
+  padding: 0 10px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+form > button {
+  width: 130px;
+  padding: 0 1rem;
+  height: 2.5rem;
+  background-color: var(--red);
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  border: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 850px) {
+  form {
+    height: 3.75rem;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 0;
+    border-radius: 5px;
+  }
+
+  form > input {
+    width: 70%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  form > button {
+    width: 30%;
+    height: 100%;
+    background-color: var(--red);
+    color: white;
+    font-weight: 500;
+    font-size: 26px;
+    border: transparent;
+    box-sizing: border-box;
+  }
+}
+
+/* Figure and image styling */
+figure {
+  width: 100%;
+  max-width: 446px;
+}
+
+figure > img {
+  width: 100%;
+}
+
+/* general container styling */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* text titles and subtitles */
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+h3.subtitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 650px) {
+  .title {
+    font-size: 3.125rem;
+  }
+
+  .subtitle {
+    font-size: 1.625rem;
+  }
+
+  h3.subtitle {
+    font-size: 1.1875rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+}
+
+/* story card styling for section contents */
+.story_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  gap: 1.5rem;
+}
+
+@media (min-width: 850px) {
+  .story_card {
+    justify-content: space-between;
+    flex-flow: row;
+  }
+}
+
+/* texts container styling */
+.texts {
+  text-align: center;
+  width: 100%;
+  max-width: 530px;
+}
+
+@media (min-width: 850px) {
+  .texts {
+    text-align: left;
+  }
+}
+
+/* Header */
+header {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  background-color: transparent;
+  z-index: 5;
+}
+
+.header_container {
+  width: 90%;
+  height: 80px;
+  max-width: 1808px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo__container {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  max-width: 138px;
+  max-height: 46px;
+}
+
+.logo__container > img {
+  width: 100%;
+  height: 100%;
+}
+
+.signin_cta {
+  display: inline-block;
+  text-decoration: none;
+  width: 84px;
+  height: 34px;
+  padding: 7px 17px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: var(--red);
+  color: var(--white);
+  border-radius: 5px;
+}
+
+/* Hero section */
+
+section.hero__section {
+  position: relative;
+  height: 508px;
+  background-image: url(./images/hero_bg.jpg);
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.9) 0,
+      transparent 50% 40%,
+      rgba(0, 0, 0, 0.9)
+    ),
+    url(./images/hero_bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 650px) {
+  section.hero__section {
+    height: 721px;
+  }
+}
+
+@media (min-width: 1024px) {
+  section.hero__section {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 1366px) {
+  section.hero__section {
+    height: 692px;
+  }
+}
+
+.hero__card {
+  position: absolute;
+  width: 90%;
+  max-width: 640px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* FAQs section */
+.faqs__section h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.faqs__section ul {
+  width: 100%;
+  margin: 0 auto 3rem;
+}
+
+.faqs__section ul > li {
+  width: 100%;
+  margin: 0 auto 10px;
+  padding: 1.25rem 1.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.125rem;
+  font-weight: 500;
+  background-color: var(--grey);
+}
+
+@media (min-width: 650px) {
+  .faqs__section ul {
+    max-width: 610px;
+  }
+
+  .faqs__section ul > li {
+    font-size: 1.625rem;
+    padding: 14px 1.875rem;
+  }
+}
+
+@media (min-width: 850px) {
+  .faqs__section ul {
+    max-width: 815px;
+  }
+
+  .faqs__section ul > li {
+    max-width: 815px;
+  }
+}
+
+.form__container {
+  width: 90%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+footer {
+  width: 100%;
+  background-color: #000000;
+  padding: 50px 0;
+  --footer-color: #737373;
+  color: var(--footer-color);
+}
+
+.footer__container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer__container > p:first-of-type {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid white;
+}
+
+.footer__container > p:last-of-type {
+  font-size: 13px;
+  margin-bottom: 1.5rem;
+  border: 1px solid white;
+}
+
+.footer__container > nav {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem 1rem;
+  flex-flow: row wrap;
+  border: 1px solid white;
+}
+
+@media (min-width: 850px) {
+  .footer__container > nav {
+    gap: 6rem;
+  }
+}
+
+.footer__container ul {
+  list-style: none;
+  display: inline-block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.footer__container ul li a {
+  display: inline-block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: var(--footer-color);
+  font-size: 13px;
+}
+
+.footer__container ul li a:hover {
+  text-decoration: underline;
+}
